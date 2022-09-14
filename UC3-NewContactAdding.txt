@@ -1,0 +1,22 @@
+UC3-New Contacts
+
+mysql> insert into addressbook values(
+    -> 'Veerendra','Singavarapu','ShantiNagar','Vijayawada','AP',521235,798927,'singavarapuveerendra@gmail.com'
+    -> );
+Query OK, 1 row affected (0.13 sec)
+
+mysql> insert into addressbook values(
+    -> 'Hitesh','Meher','mainroad','cuttak','OR',44335,754527,'xyz@gmail.com'
+    -> );
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select*from addressbook;
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+| firstname | lastname    | address     | city       | state | zip    | PhoneNumber | email                          |
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+| Veerendra | Singavarapu | ShantiNagar | Vijayawada | AP    | 521235 |      798927 | singavarapuveerendra@gmail.com |
+| Hitesh    | Meher       | mainroad    | cuttak     | OR    |  44335 |      754527 | xyz@gmail.com                  |
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+2 rows in set (0.00 sec)
+
+mysql>
