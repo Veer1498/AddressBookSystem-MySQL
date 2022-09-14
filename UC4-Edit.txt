@@ -1,0 +1,34 @@
+UC4- Edit Contact
+=================
+
+
+Before Edit
+===========
+
+mysql> select*from addressbook;
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+| firstname | lastname    | address     | city       | state | zip    | PhoneNumber | email                          |
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+| Veerendra | Singavarapu | ShantiNagar | Vijayawada | AP    | 521235 |      798927 | singavarapuveerendra@gmail.com |
+| Hitesh    | Meher       | mainroad    | cuttak     | OR    |  44335 |      754527 | xyz@gmail.com                  |
++-----------+-------------+-------------+------------+-------+--------+-------------+--------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> update addressbook set state = 'Andhra Pradesh',address = 'TechPark,Highway 246' where firstname ='Veerendra';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+After Edit
+==========
+
+mysql> select*from addressbook;
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+
+| firstname | lastname    | address              | city       | state          | zip    | PhoneNumber | email                          |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+
+| Veerendra | Singavarapu | TechPark,Highway 246 | Vijayawada | Andhra Pradesh | 521235 |      798927 | singavarapuveerendra@gmail.com |
+| Hitesh    | Meher       | mainroad             | cuttak     | OR             |  44335 |      754527 | xyz@gmail.com                  |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+
+2 rows in set (0.00 sec)
+
+mysql>
