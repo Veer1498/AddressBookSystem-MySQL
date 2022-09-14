@@ -1,0 +1,25 @@
+UC7
+===
+
+mysql> alter table addressbook add sNo int not null auto_increment primary key;
+Query OK, 0 rows affected (0.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select*from addressbook;
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+| firstname | lastname    | address              | city       | state          | zip    | PhoneNumber | email                          | sNo |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+| Veerendra | Singavarapu | TechPark,Highway 246 | Vijayawada | Andhra Pradesh | 521235 |      798927 | singavarapuveerendra@gmail.com |   1 |
+| Hitesh    | Meher       | mainroad             | cuttak     | OR             |  44335 |      754527 | xyz@gmail.com                  |   2 |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+2 rows in set (0.00 sec)
+
+mysql> select max(sNo) from addressbook;
++----------+
+| max(sNo) |
++----------+
+|        2 |
++----------+
+1 row in set (0.09 sec)
+
+mysql>
