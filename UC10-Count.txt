@@ -1,0 +1,21 @@
+UC-10 - Count no of Contacts
+=============================
+
+
+mysql> select count(firstname) from addressbook where type = 'Family';
++------------------+
+| count(firstname) |
++------------------+
+|                3 |
++------------------+
+1 row in set (0.12 sec)
+
+mysql> select count(firstname) from addressbook where type = 'Friends';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql>
