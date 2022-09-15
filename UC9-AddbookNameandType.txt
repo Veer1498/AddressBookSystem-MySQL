@@ -1,0 +1,37 @@
+UC - 9
+======
+
+
+mysql> alter table addressbook add column bookName varchar(50) not null,
+    -> add column type varchar(20) not null;
+Query OK, 0 rows affected (2.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update addressbook set bookName ='Home',type = 'Family' where firstname = 'Veerendra';
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook set bookName ='Home',type = 'Family' where firstname = 'Madhu';
+Query OK, 1 row affected (0.15 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook set bookName ='Home',type = 'Family' where firstname = 'Mahendra';
+Query OK, 1 row affected (0.16 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook set bookName ='Office',type = 'Friends' where firstname = 'Hitesh';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+----------+---------+
+| firstname | lastname    | address              | city       | state          | zip    | PhoneNumber | email                          | sNo | bookName | type    |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+----------+---------+
+| Veerendra | Singavarapu | TechPark,Highway 246 | Vijayawada | Andhra Pradesh | 521235 |      798927 | singavarapuveerendra@gmail.com |   1 | Home     | Family  |
+| Hitesh    | Meher       | mainroad             | cuttak     | OR             |  44335 |      754527 | xyz@gmail.com                  |   2 | Office   | Friends |
+| Mahendra  | Singavarapu | ShantiNagar          | Vijayawada | AP             | 521235 |      756457 | ghsag@dsd.com                  |   3 | Home     | Family  |
+| Madhu     | Reddy       | besant road          | Vijayawada | AP             | 632543 |      423434 | madgirl@xyz.com                |   4 | Home     | Family  |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+----------+---------+
+4 rows in set (0.00 sec)
+
+mysql>
