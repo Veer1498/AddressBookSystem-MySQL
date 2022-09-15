@@ -1,0 +1,13 @@
+UC8-Retrieve Data by sorted Order
+================================
+
+mysql> select * from addressbook
+    -> order by firstname
+    -> ;
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+| firstname | lastname    | address              | city       | state          | zip    | PhoneNumber | email                          | sNo |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+| Hitesh    | Meher       | mainroad             | cuttak     | OR             |  44335 |      754527 | xyz@gmail.com                  |   2 |
+| Veerendra | Singavarapu | TechPark,Highway 246 | Vijayawada | Andhra Pradesh | 521235 |      798927 | singavarapuveerendra@gmail.com |   1 |
++-----------+-------------+----------------------+------------+----------------+--------+-------------+--------------------------------+-----+
+2 rows in set (0.11 sec)
